@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kaizaro Tutor AI</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  
+
+  <!-- ===== LOGIN SCREEN ===== -->
+  <div class="login-container" id="loginScreen">
+    <div class="login-card">
+      <h1 class="brand-title">Kaizaro Tutor AI</h1>
+
+      <input type="text" id="nameInput" placeholder="Enter your name" required>
+      <input type="password" id="passwordInput" placeholder="Create/Enter Password" required>
+
+      <button class="primary-btn" id="loginBtn">Login / Sign Up</button>
+      <p class="mini-note">No email required — local demo login</p>
+    </div>
+  </div>
+
+  <!-- ===== MAIN APP UI ===== -->
+  <div class="app hidden" id="appUI">
+
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h3>Study Setup</h3>
+
+      <label>Class</label>
+      <input type="text" id="classInput" placeholder="Enter your class e.g., 10th">
+
+      <label>Subject</label>
+      <input type="text" id="subjectInput" placeholder="Enter subject e.g., Physics">
+
+      <label>Chapter / Topic</label>
+      <input type="text" id="topicInput" placeholder="Enter chapter/topic e.g., Ohm’s Law">
+
+      <button class="generate-btn" id="genNotesBtn">📚 Generate Notes</button>
+
+      <hr>
+      <label class="upload">
+        📎 Attach
+        <input type="file" id="fileInput" accept="image/*,.pdf">
+      </label>
+
+      <button class="logout-btn" id="logoutBtn">Logout</button>
+    </aside>
+
+    <!-- Chat UI -->
+    <main class="main-area">
+
+      <!-- Top Header -->
+      <header class="top-header">
+        <h2>Kazen Tutor AI</h2>
+        <div class="themeToggle" id="themeToggle"><div></div></div>
+      </header>
+
+      <!-- Chat Messages -->
+      <div class="chat-box" id="chatBox">
+        <div class="ai-msg">👋 Hi! I am your Kazen Tutor AI. Ask me anything!</div>
+      </div>
+
+      <!-- Chat Input with Buttons Above -->
+      <div class="chat-input">
+        <div class="btn-row">
+          <button id="sendBtn">➤</button>
+          <button id="micBtn">🎤</button>
+        </div>
+        <textarea id="userInput" placeholder="Ask your doubt…"></textarea>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
